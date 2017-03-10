@@ -27,7 +27,11 @@ public class MergeSort {
 	
 	private static boolean less(Comparable comparable, Comparable comparable2)
 	{
+		int result=comparable.compareTo(comparable2);
+		if(result<0)
 		return true;
+		else 
+		return false;
 	}
 
 	private static void sort(Comparable[] a,Comparable[] aux,int lo,int hi)
