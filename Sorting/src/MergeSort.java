@@ -41,6 +41,8 @@ public class MergeSort {
 		int mid=lo+(hi-lo)/2;
 		sort(a,aux,lo,mid);
 		sort(a,aux,mid+1,hi);
+		if(!less(a[mid+1],a[mid]))   //check if array is already in order,then simply return
+			return;
 		merge(a,aux,lo,mid,hi);
 	}
 	//creation of array in a method which is getting recursively called is costly so need another method
